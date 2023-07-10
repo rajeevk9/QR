@@ -18,51 +18,95 @@ function getUsernameFromEmail($email) {
 
 if(isset($_POST['submit']) ) {
 	$tempDir = 'temp/'; 
-	$email = $_POST['mail'];
-	$subject =  $_POST['subject'];
-	$filename = getUsernameFromEmail($email);
-	$body =  $_POST['msg'];
-	$codeContents = 'mailto:'.$email.'?subject='.urlencode($subject).'&body='.urlencode($body); 
+	$pname = $_POST['pname'];
+	$pnumber = $_POST['pnumber'];
+	$pbatch = $_POST['pbatch'];
+	$pregion = $_POST['pregion'];
+	$pmfgdate = $_POST['pmfgdate'];
+	$pexpirydate = $_POST['pexpirydate'];
+	$pprice = $_POST['pprice'];
+	$rurl = $_POST['rurl'];
+	
+	//$subject =  $_POST['subject'];
+	$filename = getUsernameFromEmail('rajeev@text.com');
+	//$body =  $_POST['msg'];
+	$codeContents = 'mailto:rajeev@text.com?subject='.urlencode($pname).'&body='.urlencode($pnumber); 
+	//$codeContents = header("Location: https://example.com/new-page.php");
 	QRcode::png($codeContents, $tempDir.''.$filename.'.png', QR_ECLEVEL_L, 5);
+	//QRcode::png('https://localhost/QR/result.php');
 }
 ?>
 <!DOCTYPE html>
 <html lang="en-US">
 	<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>(QR) Code Generator</title>
 	<link rel="stylesheet" href="libs/css/bootstrap.min.css">
 	<link rel="stylesheet" href="libs/style.css">
 	<script src="libs/navbarclock.js"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        @media (max-width: 767px) {
+            .form-group {
+                flex-direction: column;
+            }
+        }
+    </style>
 	</head>
 	<body onload="startTime()">
-		<div class="myoutput">
-			<h3><strong>(QR) Code Generator</strong></h3>
-			<div class="input-field">
-				<h3>Please Fill-out All Fields</h3>
-				<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" >
+		<div class="container">
+				<form method="post" action="result.php" >
+				
+				<div class="row">
+				  <div class="col-md-6">
 					<div class="form-group">
-						<label>Email</label>
-						<input type="email" class="form-control" name="mail" style="width:20em;" placeholder="Enter your Email" value="<?php echo @$email; ?>" required />
+						<label>Product Name</label>
+						<input type="text" class="form-control" name="pname" style="width:20em;" placeholder="Enter Product Name" value="<?php echo @$pname; ?>" required />
 					</div>
 					<div class="form-group">
-						<label>Subject</label>
-						<input type="text" class="form-control" name="subject" style="width:20em;" placeholder="Enter your Email Subject" value="<?php echo @$subject; ?>" required pattern="[a-zA-Z .]+" />
+						<label>Product Number</label>
+						<input type="text" class="form-control" name="pnumber" style="width:20em;" placeholder="Enter Product Number" value="<?php echo @$pnumber; ?>" required pattern="[a-zA-Z0-9 .]+" />
 					</div>
 					<div class="form-group">
-						<label>Message</label>
-						<input type="text" class="form-control" name="msg" style="width:20em;" value="<?php echo @$body; ?>" required pattern="[a-zA-Z0-9 .]+" placeholder="Enter your message"></textarea>
+						<label>Product Batch</label>
+						<input type="text" class="form-control" name="pbatch" style="width:20em;" value="<?php echo @$pbatch; ?>" required pattern="[a-zA-Z0-9 .]+" placeholder="Enter Product Batch"></textarea>
 					</div>
 					<div class="form-group">
+						<label>Product Region</label>
+						<input type="text" class="form-control" name="pregion" style="width:20em;" value="<?php echo @$pregion; ?>" required placeholder="Enter Product Region"></textarea>
+					</div>
+			  </div>
+			  <div class="col-md-6">
+				<div class="form-group">
+						<label>MFG Date</label>
+						<input type="date" class="form-control" name="pmfgdate" style="width:20em;" value="<?php echo @$pmfgdate; ?>" required placeholder="Enter Product MFG Date"></textarea>
+					</div>
+					<div class="form-group">
+						<label>Expiry Date</label>
+						<input type="date" class="form-control" name="pexpirydate" style="width:20em;" value="<?php echo @$pepirydate; ?>" required placeholder="Enter Product Expiry Date"></textarea>
+					</div>
+					<div class="form-group">
+						<label>Price</label>
+						<input type="number" class="form-control" name="pprice" style="width:20em;" value="<?php echo @$pprice; ?>" required placeholder="Enter Product Price"></textarea>
+					</div>
+					<div class="form-group">
+						<label>Redirect URL</label>
+						<input type="url" class="form-control" name="rurl" style="width:20em;" value="<?php echo @$rurl; ?>" required placeholder="Enter Redirect URL"></textarea>
+					</div>
+					
+					</div>
+					</div>		
+				<div class="form-group">
 						<input type="submit" name="submit" class="btn btn-primary submitBtn" style="width:20em; margin:0;" />
-					</div>
-				</form>
-			</div>
+				</div>
+			</form>
 			<?php
 			if(!isset($filename)){
-				$filename = "author";
+				$filename = $pname."-author";
 			}
 			?>
-			<div class="qr-field">
+			<div class="q">
 				<h2 style="text-align:center">QR Code Result: </h2>
 				<center>
 					<div class="qrframe" style="border:2px solid black; width:210px; height:210px;">
@@ -73,6 +117,7 @@ if(isset($_POST['submit']) ) {
 			</div>
 			
 		</div>
-	</body>
+</body>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 	<footer></footer>
 </html>
