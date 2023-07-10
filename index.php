@@ -30,10 +30,10 @@ if(isset($_POST['submit']) ) {
 	//$subject =  $_POST['subject'];
 	$filename = getUsernameFromEmail('rajeev@text.com');
 	//$body =  $_POST['msg'];
-	$codeContents = 'mailto:rajeev@text.com?subject='.urlencode($pname).'&body='.urlencode($pnumber); 
+	//$codeContents = 'mailto:rajeev@text.com?subject='.urlencode($pname).'&body='.urlencode($pnumber); 
 	//$codeContents = header("Location: https://example.com/new-page.php");
-	QRcode::png($codeContents, $tempDir.''.$filename.'.png', QR_ECLEVEL_L, 5);
-	//QRcode::png('https://localhost/QR/result.php');
+	//QRcode::png($codeContents, $tempDir.''.$filename.'.png', QR_ECLEVEL_L, 5);
+	QRcode::png('http://40.71.6.170/QR/result.php');
 }
 ?>
 <!DOCTYPE html>
@@ -56,7 +56,7 @@ if(isset($_POST['submit']) ) {
 	</head>
 	<body onload="startTime()">
 		<div class="container">
-				<form method="post" action="result.php" >
+				<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" >
 				
 				<div class="row">
 				  <div class="col-md-6">
@@ -103,7 +103,7 @@ if(isset($_POST['submit']) ) {
 			</form>
 			<?php
 			if(!isset($filename)){
-				$filename = $pname."-author";
+				$filename = "author";
 			}
 			?>
 			<div class="q">

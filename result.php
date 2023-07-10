@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	$pprice = $_POST['pprice'];
 	$rurl = $_POST['rurl'];
 	
-	echo $pname;
+	echo $pname."--".$pnumber."--".$pbatch."--".$pregion."--".$pmfgdate."--".$pexpirydate;
 
   // Process the data or perform any desired actions with it
 }
