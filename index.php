@@ -1,9 +1,4 @@
-<?php
-echo phpinfo();
- // Enable error reporting
-  error_reporting(E_ALL);
-  ini_set('display_errors', 1);
-  
+<?php  
 $f = "visit.php";
 if(!file_exists($f)){
 	touch($f);
@@ -33,9 +28,9 @@ if(isset($_POST['submit']) ) {
 	//$rurl = $_POST['rurl'];
 	
 	//$subject =  $_POST['subject'];
-	$filename = getUsernameFromEmail('rajeev@text.com');
+	$filename = $pname."_".$pnumber;
 	//$body =  $_POST['msg'];
-	$codeContents = 'mailto:rajeev@text.com?subject='.urlencode($pname).'&body='.urlencode($pnumber); 
+	//$codeContents = 'mailto:rajeev@text.com?subject='.urlencode($pname).'&body='.urlencode($pnumber); 
 	//header("Location: http://40.71.6.170/QR/result.php?ProductName=".$pname."&ProductNumber=".$pnumber."&ProductBatch=".$pbatch."&ProductRegion=".$pregion."&ProductMfgDate=".$pmfgdate."&ProductExpDate=".$pexpirydate."&ProductPrice=".$pprice);
 	//QRcode::png($codeContents, $tempDir.''.$filename.'.png', QR_ECLEVEL_L, 5);
 	QRcode::png("http://23.96.36.38/QR/result.php?ProductName=".$pname."&ProductNumber=".$pnumber."&ProductBatch=".$pbatch."&ProductRegion=".$pregion."&ProductMfgDate=".$pmfgdate."&ProductExpDate=".$pexpirydate."&ProductPrice=".$pprice);
