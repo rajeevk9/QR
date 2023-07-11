@@ -1,27 +1,53 @@
 <?php
-if (isset($_GET['ProductName'])) {
-	$productName = $_GET['ProductName'];
-	$productNumber = $_GET['ProductNumber'];
-	$productBatch = $_GET['ProductBatch'];
-	$productRegion = $_GET['ProductRegion'];
-	$productMfgDate = $_GET['ProductMfgDate'];
-	$productExpDate = $_GET['ProductExpDate'];
-	$productPrice = $_GET['ProductPrice'];
-}
-if (isset($_POST['uname'])) {
-	$uname = $_POST['uname'];
-}
-if (isset($_POST['email'])) {
-	$email = $_POST['email'];
+	if (isset($_GET['ProductName'])) {
+		$productName = $_GET['ProductName'];
+	}else{
+		$productName = $_POST['pname'];
 	}
-if (isset($_POST['mob'])) {
-	$mob = $_POST['mob'];
+	if (isset($_GET['ProductName'])) {
+		$productNumber = $_GET['ProductNumber'];
+	}else{
+		$productNumber = $_POST['pnumber'];
 	}
-if (isset($_POST['prbtype'])) {
-	$prbtype = $_POST['prbtype'];
+	if (isset($_GET['ProductName'])) {
+		$productBatch = $_GET['ProductBatch'];
+	}else{
+		$productBatch = $_POST['pbatch'];
 	}
-if (isset($_POST['prbdetails'])) {
-	$prbdetails = $_POST['prbdetails'];
+	if (isset($_GET['ProductName'])) {
+		$productRegion = $_GET['ProductRegion'];
+	}else{
+		$productRegion = $_POST['pregion'];
+	}
+	if (isset($_GET['ProductName'])) {
+		$productMfgDate = $_GET['ProductMfgDate'];
+	}else{
+		$productMfgDate = $_POST['pmfgdate'];
+	}
+	if (isset($_GET['ProductName'])) {
+		$productExpDate = $_GET['ProductExpDate'];
+	}else{
+	$productExpDate = $_POST['pexpirydate'];
+	}
+	if (isset($_GET['ProductName'])) {
+		$productPrice = $_GET['ProductPrice'];
+	}else{
+		$productPrice = $_POST['pprice'];
+	}
+	if (isset($_POST['uname'])) {
+		$uname = $_POST['uname'];
+	}
+	if (isset($_POST['email'])) {
+		$email = $_POST['email'];
+	}
+	if (isset($_POST['mob'])) {
+		$mob = $_POST['mob'];
+	}
+	if (isset($_POST['prbtype'])) {
+		$prbtype = $_POST['prbtype'];
+	}
+	if (isset($_POST['prbdetails'])) {
+		$prbdetails = $_POST['prbdetails'];
 	}
 ?>
 <!DOCTYPE html>
