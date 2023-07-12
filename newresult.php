@@ -151,9 +151,6 @@ h1 {
 	</style>
   </head>
   <body>
-    <div class="container">
-	 
-	  
 	  <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" >
 				<div class="row">
 				
@@ -219,6 +216,5 @@ h1 {
 					
 			</div>		
 			</form>		
-	</div>
   </body>
 </html>
