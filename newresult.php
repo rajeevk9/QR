@@ -42,49 +42,16 @@ input {
 }
 
 body {
-  margin: 0;
-  width: 100vw;
-  height: 100vh;
+
   background: #ecf0f3;
-  display: flex;
-  justify-content: center;
-  place-items: center;
-  overflow: hidden;
   font-family: poppins;
 }
-
-.container {
-  position: relative;
-  padding: 40px;
-  box-sizing: border-box;
-  background: #ecf0f3;
-  box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
-}
-
-.brand-logo {
-  height: 100px;
-  width: 100px;
-  background: url("https://img.icons8.com/color/100/000000/twitter--v2.png");
-  margin: auto;
-  border-radius: 50%;
-  box-sizing: border-box;
-  box-shadow: 7px 7px 10px #cbced1, -7px -7px 10px white;
-}
-
-.brand-title {
-  margin-top: 10px;
-  font-weight: 900;
-  font-size: 1.8rem;
-  color: #1DA1F2;
-  letter-spacing: 1px;
-}
-
 .inputs {
   text-align: left;
   margin-top: 30px;
 }
 
-label, input, button {
+label, input {
   display: block;
   width: 100%;
   padding: 0;
@@ -131,27 +98,10 @@ select, textarea, input {
   box-shadow: none;
 }
 
-a {
-  position: absolute;
-  font-size: 8px;
-  bottom: 4px;
-  right: 4px;
-  text-decoration: none;
-  color: black;
-  background: #ea1f27;
-  border-radius: 10px;
-  padding: 2px;
-}
-
-h1 {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
 	</style>
   </head>
   <body>
-	  <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" >
+	  <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" style="padding: 39px;">
 				<div class="row">
 				
 					
