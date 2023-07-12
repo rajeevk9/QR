@@ -52,6 +52,7 @@ if(isset($_POST['submit']) ) {
                 flex-direction: column;
             }
         }
+		
     </style>
 	</head>
 	<body onload="startTime()">

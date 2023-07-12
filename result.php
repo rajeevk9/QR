@@ -57,6 +57,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>(QR) Code Generator</title>
 	<link rel="stylesheet" href="libs/css/bootstrap.min.css">
+	<link rel="stylesheet" href="libs/style.css">
 	<script src="libs/navbarclock.js"></script>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
@@ -65,7 +66,7 @@
                 flex-direction: column;
             }
         }
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;900&display=swap');
+    
     /* CSS for responsiveness */
     @media screen and (max-width: 600px) {
       table {
