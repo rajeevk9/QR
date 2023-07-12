@@ -129,7 +129,7 @@
 				<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" >
 				<div class="row">
 				<div class="prefilled-prd-details" style=" width: 100%;border: 2px solid;border-radius: 12px;background-image: linear-gradient(to right bottom, #62a37347, #5998bb, #c2e1eb, #91a5a9, #5cd1d0);">
-				<h2 style="margin-left: 15px;">Product Details</h2>
+				<h2 style="padding: 15px;">Product Details</h2>
 				  <div class="col-md-6">
 					<div class="form-group">
 						<span><h4><u>Product Name:</u>&nbsp;&nbsp;<?php echo @$productName; ?></h4> </span>
@@ -157,7 +157,7 @@
 				  </div>
 				</div>
 				<div class="prefilled-prd-details" style="background: #ecf0f3; width: 100%;border: 2px solid;margin-top: 10px;border-radius: 12px;">
-				<h2 style="margin-left: 15px;">Please provide further details</h2>
+				<h2 style="padding: 15px;">Please provide further details</h2>
 				<div class="col-md-6">
 					<div class="form-group">
 						<label>Name</label>
