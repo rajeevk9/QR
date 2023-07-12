@@ -1,6 +1,6 @@
 <?php
 	if (isset($_GET['ProductName'])) {
-		$productName = $_GET['ProductName'];
+		$productName = rawurldecode($_GET['ProductName']);
 	}else{
 		$productName = $_POST['pname'];
 	}
@@ -107,10 +107,26 @@
 	select::placeholder, textarea::placeholder, input::placeholder {
 	  color: gray;
 	}
+	.submitBtn {
+	  color: white;
+	  margin-top: 20px;
+	  background: #1DA1F2;
+	  height: 50px;
+	  width:53%;
+	  border-radius: 9px;
+	  cursor: pointer;
+	  font-weight: 900;
+	  box-shadow: 6px 6px 6px #cbced1, -6px -6px 6px white;
+	  transition: 0.5s;
+	}
+
+	.submitBtn:hover {
+	  box-shadow: none;
+	}
   </style>
 	</head>
-	<body onload="startTime()">
-		<div class="container">
+	<body onload="startTime()" style="font-size: 1.5rem !important;">
+		<div class="container" style="padding: 24px;">
 				<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" >
 				<div class="row">
 				<div class="prefilled-prd-details" style=" width: 100%;border: 2px solid;border-radius: 12px;background-image: linear-gradient(to right bottom, #62a37347, #5998bb, #c2e1eb, #91a5a9, #5cd1d0);">
@@ -173,7 +189,7 @@
 						<textarea class="form-control" name="prbdetails" style="width:20em;" value="<?php echo @$prbdetails; ?>" required placeholder="Enter Your Problems in Details"></textarea>
 					</div>
 					<div class="form-group">
-						<input type="submit" name="submit" class="btn btn-primary submitBtn" style="width:20em; margin:0;" />
+						<input type="submit" name="submit" class="btn btn-primary submitBtn"/>
 					</div>
 					</div>
 				</div>
