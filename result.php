@@ -57,7 +57,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>(QR) Code Generator</title>
 	<link rel="stylesheet" href="libs/css/bootstrap.min.css">
-	<link rel="stylesheet" href="libs/style.css">
 	<script src="libs/navbarclock.js"></script>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
@@ -66,7 +65,7 @@
                 flex-direction: column;
             }
         }
-    
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;900&display=swap');
     /* CSS for responsiveness */
     @media screen and (max-width: 600px) {
       table {
@@ -86,49 +85,63 @@
         width: 120px; /* Adjust as needed */
       }
     }
+	label, input {
+	  display: block;
+	  width: 100%;
+	  padding: 9px;
+	  border: none;
+	  outline: none;
+	  box-sizing: border-box;
+	}
+	
+	.form-control {
+	  background: #ecf0f3;
+	  padding: 10px;
+	  padding-left: 20px;
+	  height: 50px;
+	  font-size: 14px;
+	  border-radius: 10px;
+	  box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
+	}
+	select::placeholder, textarea::placeholder, input::placeholder {
+	  color: gray;
+	}
   </style>
 	</head>
 	<body onload="startTime()">
 		<div class="container">
 				<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" >
 				<div class="row">
-				<div class="prefilled-prd-details" style=" width: 75%; border: 2px solid;">
-				<h2>Pre-Filled Product Details</h2>
+				<div class="prefilled-prd-details" style=" width: 100%;border: 2px solid;border-radius: 12px;background-image: linear-gradient(to right bottom, #62a37347, #5998bb, #c2e1eb, #91a5a9, #5cd1d0);">
+				<h2 style="margin-left: 15px;">Product Details</h2>
 				  <div class="col-md-6">
 					<div class="form-group">
-						<label>Product Name</label>
-						<input type="text" class="form-control" name="pname" style="width:20em;" placeholder="Enter Product Name" value="<?php echo @$productName; ?>" readonly required />
+						<span><h4><u>Product Name:</u>&nbsp;&nbsp;<?php echo @$productName; ?></h4> </span>
 					</div>
 					<div class="form-group">
-						<label>Product Number</label>
-						<input type="text" class="form-control" name="pnumber" style="width:20em;" placeholder="Enter Product Number" value="<?php echo @$productNumber; ?>" readonly required pattern="[a-zA-Z0-9 .]+" />
+						<span><h4><u>Product Number:</u>&nbsp;&nbsp; <?php echo @$productNumber; ?></h4> </span>
 					</div>
 					<div class="form-group">
-						<label>Product Batch</label>
-						<input type="text" class="form-control" name="pbatch" style="width:20em;" value="<?php echo @$productBatch; ?>" required pattern="[a-zA-Z0-9 .]+" placeholder="Enter Product Batch" readonly></textarea>
+						<span><h4><u>Product Batch:</u>&nbsp;&nbsp; <?php echo @$productBatch; ?></h4> </span>
 					</div>
 					<div class="form-group">
-						<label>Product Region</label>
-						<input type="text" class="form-control" name="pregion" style="width:20em;" value="<?php echo @$productRegion; ?>" readonly required placeholder="Enter Product Region"></textarea>
+						<span><h4><u>Product Region:</u>&nbsp;&nbsp; <?php echo @$productRegion; ?></h4> </span>
 					</div>
 			  </div>
 				<div class="col-md-6">
 					<div class="form-group">
-						<label>MFG Date</label>
-						<input type="date" class="form-control" name="pmfgdate" style="width:20em;" value="<?php echo @$productMfgDate; ?>" readonly required placeholder="Enter Product MFG Date"></textarea>
+						<span><h4><u>MFG Date:</u>&nbsp;&nbsp; <?php echo @$productMfgDate; ?></h4> </span>
 					</div>
 					<div class="form-group">
-						<label>Expiry Date</label>
-						<input type="date" class="form-control" name="pexpirydate" style="width:20em;" value="<?php echo @$productExpDate; ?>" readonly required placeholder="Enter Product Expiry Date"></textarea>
+						<span><h4><u>Expiry Date:</u>&nbsp;&nbsp; <?php echo @$productExpDate; ?></h4> </span>
 					</div>
 					<div class="form-group">
-						<label>Price</label>
-						<input type="number" class="form-control" name="pprice" style="width:20em;" value="<?php echo @$productPrice; ?>" readonly required placeholder="Enter Product Price"></textarea>
+						<span><h4><u>Price:</u>&nbsp;&nbsp; <?php echo @$productPrice; ?></h4> </span>
 					</div>
 				  </div>
 				</div>
-				<div class="prefilled-prd-details" style="width: 75%;border: 2px solid;margin-top: 10px;">
-				<h2>Information provided by User</h2>
+				<div class="prefilled-prd-details" style="background: #ecf0f3; width: 100%;border: 2px solid;margin-top: 10px;border-radius: 12px;">
+				<h2 style="margin-left: 15px;">Please provide further details</h2>
 				<div class="col-md-6">
 					<div class="form-group">
 						<label>Name</label>
