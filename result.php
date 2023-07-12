@@ -161,22 +161,22 @@
 				<div class="col-md-6">
 					<div class="form-group">
 						<label>Name</label>
-						<input type="text" class="form-control" name="uname" style="width:20em;" value="<?php echo @$uname; ?>" required placeholder="Enter Your Name">
+						<input type="text" class="form-control" name="uname" style="width:22em;" value="<?php echo @$uname; ?>" required placeholder="Enter Your Name">
 					</div>
 					<div class="form-group">
 						<label>Email</label>
-						<input type="email" class="form-control" name="email" style="width:20em;" value="<?php echo @$email; ?>" required placeholder="Enter Your Email">
+						<input type="email" class="form-control" name="email" style="width:22em;" value="<?php echo @$email; ?>" required placeholder="Enter Your Email">
 					</div>
 				
 					<div class="form-group">
 						<label>Mobile</label>
-						<input type="tel" class="form-control" name="mob" style="width:20em;" value="<?php echo @$mob; ?>" required placeholder="Enter Your Mobile Number">
+						<input type="tel" class="form-control" name="mob" style="width:22em;" value="<?php echo @$mob; ?>" required placeholder="Enter Your Mobile Number">
 					</div>
 					</div>
 				<div class="col-md-6">
 					<div class="form-group">
 						<label>Problem Type</label>
-						<select class="form-control" name="prbtype" style="width:20em;" value="<?php echo @$prbtype; ?>"  required placeholder="Enter Product Expiry Date">
+						<select class="form-control" name="prbtype" style="width:22em;" value="<?php echo @$prbtype; ?>"  required placeholder="Enter Product Expiry Date">
 						  <option value="prb1">Problem 1</option>
 						  <option value="prb2">Problem 2</option>
 						  <option value="prb3">problem 3</option>
@@ -185,10 +185,10 @@
 					</div>
 					<div class="form-group">
 						<label>Explain your problem in details</label>
-						<textarea class="form-control" name="prbdetails" style="width:20em;" value="<?php echo @$prbdetails; ?>" required placeholder="Enter Your Problems in Details"></textarea>
+						<textarea class="form-control" name="prbdetails" style="width:22em;" value="<?php echo @$prbdetails; ?>" required placeholder="Enter Your Problems in Details"></textarea>
 					</div>
 					<div class="form-group">
-						<input type="submit" name="submit" class="btn btn-primary submitBtn" style="font-size: 18px;width: 278px;"/>
+						<input type="submit" name="submit" class="btn btn-primary submitBtn" style="font-size: 18px;width: 310px;"/>
 					</div>
 					</div>
 				</div>
