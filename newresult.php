@@ -44,7 +44,6 @@ input {
 body {
 
   background: #ecf0f3;
-  font-family: poppins;
 }
 .inputs {
   text-align: left;
@@ -54,7 +53,7 @@ body {
 label, input {
   display: block;
   width: 100%;
-  padding: 0;
+  padding: 9px;
   border: none;
   outline: none;
   box-sizing: border-box;
@@ -62,6 +61,7 @@ label, input {
 
 label {
   margin-bottom: 4px;
+  font-size: 2em;
 }
 
 label:nth-of-type(2) {
@@ -78,7 +78,7 @@ select, textarea, input {
   padding-left: 20px;
   height: 50px;
   font-size: 14px;
-  border-radius: 50px;
+  border-radius: 10px;
   box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
 }
 
@@ -158,7 +158,7 @@ select, textarea, input {
 					</div>
 					<div class="form-group">
 						<label>Explain your problem in details</label>
-						<textarea name="prbdetails" style="width:21.5em;" value="<?php echo @$prbdetails; ?>" required placeholder="Enter Your Problems in Details"></textarea>
+						<textarea name="prbdetails" style="width:21.5em;height: 11em;" value="<?php echo @$prbdetails; ?>" required placeholder="Enter Your Problems in Details"></textarea>
 					</div>
 					<div class="form-group">
 						<input type="submit" name="submit" class="btn btn-primary submitBtn" style="width: 22.5em;margin-left: 4px;" />
