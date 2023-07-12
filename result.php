@@ -112,8 +112,6 @@
 	  margin-top: 20px;
 	  background: #1DA1F2;
 	  height: 50px;
-	  width:20em;
-	  font-size: 18px
 	  border-radius: 9px;
 	  cursor: pointer;
 	  font-weight: 900;
@@ -190,7 +188,7 @@
 						<textarea class="form-control" name="prbdetails" style="width:20em;" value="<?php echo @$prbdetails; ?>" required placeholder="Enter Your Problems in Details"></textarea>
 					</div>
 					<div class="form-group">
-						<input type="submit" name="submit" class="btn btn-primary submitBtn" />
+						<input type="submit" name="submit" class="btn btn-primary submitBtn" style="font-size: 18px;width: 278px;"/>
 					</div>
 					</div>
 				</div>
