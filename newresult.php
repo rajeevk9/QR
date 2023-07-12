@@ -188,21 +188,21 @@ h1 {
 				
 					<div class="form-group">
 						<label>Name</label>
-						<input type="text" name="uname" style="width:16.5em;" value="<?php echo @$uname; ?>" required placeholder="Enter Your Name">
+						<input type="text" name="uname" style="width:21.5em;" value="<?php echo @$uname; ?>" required placeholder="Enter Your Name">
 					</div>
 					<div class="form-group">
 						<label>Email</label>
-						<input type="email" name="email" style="width:16.5em;" value="<?php echo @$email; ?>" required placeholder="Enter Your Email">
+						<input type="email" name="email" style="width:21.5em;" value="<?php echo @$email; ?>" required placeholder="Enter Your Email">
 					</div>
 				
 					<div class="form-group">
 						<label>Mobile</label>
-						<input type="tel" name="mob" style="width:16.5em;" value="<?php echo @$mob; ?>" required placeholder="Enter Your Mobile Number">
+						<input type="tel" name="mob" style="width:21.5em;" value="<?php echo @$mob; ?>" required placeholder="Enter Your Mobile Number">
 					</div>
 					
 					<div class="form-group">
 						<label>Problem Type</label>
-						<select name="prbtype" style="width:16.5em;" value="<?php echo @$prbtype; ?>"  required placeholder="Enter Product Expiry Date">
+						<select name="prbtype" style="width:21.5em;" value="<?php echo @$prbtype; ?>"  required placeholder="Enter Product Expiry Date">
 						  <option value="prb1">Problem 1</option>
 						  <option value="prb2">Problem 2</option>
 						  <option value="prb3">problem 3</option>
@@ -211,7 +211,7 @@ h1 {
 					</div>
 					<div class="form-group">
 						<label>Explain your problem in details</label>
-						<textarea name="prbdetails" style="width:16.5em;" value="<?php echo @$prbdetails; ?>" required placeholder="Enter Your Problems in Details"></textarea>
+						<textarea name="prbdetails" style="width:21.5em;" value="<?php echo @$prbdetails; ?>" required placeholder="Enter Your Problems in Details"></textarea>
 					</div>
 					<div class="form-group">
 						<input type="submit" name="submit" class="btn btn-primary submitBtn" style="width: 22.5em;margin-left: 4px;" />
