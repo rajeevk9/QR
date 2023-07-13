@@ -4,35 +4,25 @@
 	}else{
 		$productName = $_POST['pname'];
 	}
-	if (isset($_GET['ProductName'])) {
+	if (isset($_GET['ProductNumber'])) {
 		$productNumber = $_GET['ProductNumber'];
 	}else{
 		$productNumber = $_POST['pnumber'];
 	}
-	if (isset($_GET['ProductName'])) {
+	if (isset($_GET['ProductBatch'])) {
 		$productBatch = $_GET['ProductBatch'];
 	}else{
 		$productBatch = $_POST['pbatch'];
 	}
-	if (isset($_GET['ProductName'])) {
-		$productRegion = $_GET['ProductRegion'];
-	}else{
-		$productRegion = $_POST['pregion'];
-	}
-	if (isset($_GET['ProductName'])) {
+	if (isset($_GET['ProductMfgDate'])) {
 		$productMfgDate = $_GET['ProductMfgDate'];
 	}else{
 		$productMfgDate = $_POST['pmfgdate'];
 	}
-	if (isset($_GET['ProductName'])) {
+	if (isset($_GET['ProductExpDate'])) {
 		$productExpDate = $_GET['ProductExpDate'];
 	}else{
 	$productExpDate = $_POST['pexpirydate'];
-	}
-	if (isset($_GET['ProductName'])) {
-		$productPrice = $_GET['ProductPrice'];
-	}else{
-		$productPrice = $_POST['pprice'];
 	}
 	if (isset($_POST['uname'])) {
 		$uname = $_POST['uname'];
