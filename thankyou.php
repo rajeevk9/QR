@@ -54,7 +54,7 @@
   </style>
 	</head>
 	<body onload="startTime()" style="font-size: 1.5rem !important;">
-		<div class="container" style="padding: 24px;">
+		<div class="container" style="padding: 24px;margin-top: 50%;">
 				
 				<div class="row">
 				<div class="prefilled-prd-details" style="width: 100%;border-bottom: 5px solid #0ae52ffa;background: #000;">
