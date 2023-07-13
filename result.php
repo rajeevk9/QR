@@ -121,12 +121,12 @@
 							<tr>
 								<td>
 									<div class="form-group">
-										<span><h4><u>MFG Date:</u>&nbsp;&nbsp; <?php echo @$productMfgDate; ?></h4> </span>
+										<span><h4><u>Mfg. Date:</u>&nbsp;&nbsp; <?php echo @$productMfgDate; ?></h4> </span>
 									</div>
 								</td>
 								<td>
 									<div class="form-group">
-										<span><h4><u>Expiry Date:</u>&nbsp;&nbsp; <?php echo @$productExpDate; ?></h4> </span>
+										<span><h4><u>Exp. Date:</u>&nbsp;&nbsp; <?php echo @$productExpDate; ?></h4> </span>
 									</div>
 								</td>
 							</tr>
