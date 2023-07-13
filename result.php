@@ -89,9 +89,9 @@
 	  color: gray;
 	}
 	.submitBtn {
-	  color: white;
+	  color: #000;
 	  margin-top: 20px;
-	  background: #1DA1F2;
+	  background: #0ae52ffa;
 	  height: 50px;
 	  border-radius: 9px;
 	  cursor: pointer;
@@ -102,6 +102,9 @@
 
 	.submitBtn:hover {
 	  box-shadow: none;
+	  background: #0ae52ffa;
+	  border-color: #0ae52ffa;
+	  color: #000;
 	}
   </style>
 	</head>
@@ -109,13 +112,7 @@
 		<div class="container" style="padding: 24px;">
 				<form method="post" action="thankyou.php" >
 				<div class="row">
-				<div class="prefilled-prd-details" style="width: 100%;border-bottom: 5px solid #0ae52ffa;background: #000;margin-top: 55%;">
-				<h2 style="padding: 15px;background: #000;color: #fff;text-align: center;">
-				We're sorry you faced a problem. Share a few details so we may help you.
-				</h2>
-					
-				</div>
-				<div class="prefilled-prd-details" style="width: 100%;border: 2px solid #0ae52ffa;margin-top: 9px;">
+				<div class="prefilled-prd-details" style="width: 100%;border: 2px solid #0ae52ffa;margin-top: -14px;">
 				<h2 style="padding: 15px;background: #000;color: #fff;text-align: center;"><?php echo @$productName; ?></h2>
 					<table style="width: 100%;margin-top: -7px;">
 						<tbody>
@@ -130,11 +127,6 @@
 										<span><h4><u>Product Batch:</u>&nbsp;&nbsp; <?php echo @$productBatch; ?></h4> </span>
 									</div>
 								</td>
-								<td>
-									<div class="form-group">
-										<span><h4><u>Product Region:</u>&nbsp;&nbsp; <?php echo @$productRegion; ?></h4> </span>
-									</div>
-								</td>
 							</tr>
 							<tr>
 								<td>
@@ -145,11 +137,6 @@
 								<td>
 									<div class="form-group">
 										<span><h4><u>Expiry Date:</u>&nbsp;&nbsp; <?php echo @$productExpDate; ?></h4> </span>
-									</div>
-								</td>
-								<td>
-									<div class="form-group">
-									<span><h4><u>Price:</u>&nbsp;&nbsp; <?php echo @$productPrice; ?></h4> </span>
 									</div>
 								</td>
 							</tr>
