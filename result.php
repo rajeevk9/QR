@@ -66,26 +66,7 @@
                 flex-direction: column;
             }
         }
-    
-    /* CSS for responsiveness */
-    @media screen and (max-width: 600px) {
-      table {
-        width: 100%;
-      }
-      thead {
-        display: none;
-      }
-      tbody tr {
-        display: block;
-        margin-bottom: 10px;
-      }
-      tbody td:before {
-        content: attr(data-th);
-        font-weight: bold;
-        display: inline-block;
-        width: 120px; /* Adjust as needed */
-      }
-    }
+    tr,td{border:5px solid;}
 	label, input {
 	  display: block;
 	  width: 100%;
@@ -94,7 +75,7 @@
 	  outline: none;
 	  box-sizing: border-box;
 	}
-	
+	 .form-group{ padding: 4px;}
 	.form-control {
 	  background: #ecf0f3;
 	  padding: 10px;
@@ -126,66 +107,80 @@
 	</head>
 	<body onload="startTime()" style="font-size: 1.5rem !important;">
 		<div class="container" style="padding: 24px;">
-				<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" >
+				<form method="post" action="thankyou.php" >
 				<div class="row">
-				<div class="prefilled-prd-details" style=" width: 100%;border: 2px solid;border-radius: 12px;background-image: linear-gradient(to right bottom, #62a37347, #5998bb, #c2e1eb, #91a5a9, #5cd1d0);">
-				<h2 style="padding: 15px;">Product Details</h2>
-				  <div class="col-md-6">
-					<div class="form-group">
-						<span><h4><u>Product Name:</u>&nbsp;&nbsp;<?php echo @$productName; ?></h4> </span>
-					</div>
-					<div class="form-group">
-						<span><h4><u>Product Number:</u>&nbsp;&nbsp; <?php echo @$productNumber; ?></h4> </span>
-					</div>
-					<div class="form-group">
-						<span><h4><u>Product Batch:</u>&nbsp;&nbsp; <?php echo @$productBatch; ?></h4> </span>
-					</div>
-					<div class="form-group">
-						<span><h4><u>Product Region:</u>&nbsp;&nbsp; <?php echo @$productRegion; ?></h4> </span>
-					</div>
-			  </div>
-				<div class="col-md-6">
-					<div class="form-group">
-						<span><h4><u>MFG Date:</u>&nbsp;&nbsp; <?php echo @$productMfgDate; ?></h4> </span>
-					</div>
-					<div class="form-group">
-						<span><h4><u>Expiry Date:</u>&nbsp;&nbsp; <?php echo @$productExpDate; ?></h4> </span>
-					</div>
-					<div class="form-group">
-						<span><h4><u>Price:</u>&nbsp;&nbsp; <?php echo @$productPrice; ?></h4> </span>
-					</div>
-				  </div>
+				<div class="prefilled-prd-details" style="width: 100%;border-bottom: 5px solid #0ae52ffa;background: #000;margin-top: 55%;">
+				<h2 style="padding: 15px;background: #000;color: #fff;text-align: center;">
+				We're sorry you faced a problem. Share a few details so we may help you.
+				</h2>
+					
 				</div>
-				<div class="prefilled-prd-details" style="background: #ecf0f3; width: 100%;border: 2px solid;margin-top: 10px;border-radius: 12px;">
-				<h2 style="padding: 15px;">Please provide further details</h2>
+				<div class="prefilled-prd-details" style="width: 100%;border: 2px solid #0ae52ffa;margin-top: 9px;">
+				<h2 style="padding: 15px;background: #000;color: #fff;text-align: center;"><?php echo @$productName; ?></h2>
+					<table style="width: 100%;margin-top: -7px;">
+						<tbody>
+							<tr>
+								<td>
+									<div class="form-group">
+										<span><h4><u>Product Number:</u>&nbsp;&nbsp; <?php echo @$productNumber; ?></h4> </span>
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<span><h4><u>Product Batch:</u>&nbsp;&nbsp; <?php echo @$productBatch; ?></h4> </span>
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<span><h4><u>Product Region:</u>&nbsp;&nbsp; <?php echo @$productRegion; ?></h4> </span>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="form-group">
+										<span><h4><u>MFG Date:</u>&nbsp;&nbsp; <?php echo @$productMfgDate; ?></h4> </span>
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<span><h4><u>Expiry Date:</u>&nbsp;&nbsp; <?php echo @$productExpDate; ?></h4> </span>
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+									<span><h4><u>Price:</u>&nbsp;&nbsp; <?php echo @$productPrice; ?></h4> </span>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<h2 style="padding: 15px;">Tell us about the problem</h2>
+				<div class="prefilled-prd-details" style="background: #ecf0f3;width: 100%;border: 2px solid #0ae52ffa;">
+				
 				<div class="col-md-6">
 					<div class="form-group">
-						<label>Name</label>
+						<label>Your Name</label>
 						<input type="text" class="form-control" name="uname" style="width:24em;" value="<?php echo @$uname; ?>" required placeholder="Enter Your Name">
 					</div>
 					<div class="form-group">
 						<label>Email</label>
 						<input type="email" class="form-control" name="email" style="width:24em;" value="<?php echo @$email; ?>" required placeholder="Enter Your Email">
 					</div>
-				
-					<div class="form-group">
-						<label>Mobile</label>
-						<input type="tel" class="form-control" name="mob" style="width:24em;" value="<?php echo @$mob; ?>" required placeholder="Enter Your Mobile Number">
-					</div>
 					</div>
 				<div class="col-md-6">
 					<div class="form-group">
 						<label>Problem Type</label>
 						<select class="form-control" name="prbtype" style="width:24em;" value="<?php echo @$prbtype; ?>"  required placeholder="Enter Product Expiry Date">
-						  <option value="prb1">Problem 1</option>
-						  <option value="prb2">Problem 2</option>
-						  <option value="prb3">problem 3</option>
-						  <option value="prb4">Problem 4</option>
+						  <option value="prb1">Product information</option>
+						  <option value="prb2">Feedback or product complaint</option>
+						  <option value="prb3">Adverse reaction from product</option>
 						</select>
 					</div>
 					<div class="form-group">
-						<label>Explain your problem in details</label>
-						<textarea class="form-control" name="prbdetails" style="width:24em;" value="<?php echo @$prbdetails; ?>" required placeholder="Enter Your Problems in Details"></textarea>
+						<label>Description</label>
+						<textarea class="form-control" name="prbdetails" style="width:24em;height: 10em;" value="<?php echo @$prbdetails; ?>" required placeholder="Describe the problem - How did it arise? When did you first face it?"></textarea>
 					</div>
 					<div class="form-group">
 						<input type="submit" name="submit" class="btn btn-primary submitBtn" style="font-size: 18px;width: 332px;"/>
