@@ -102,6 +102,10 @@
 		<div class="container" style="padding: 24px;">
 				<form method="post" action="thankyou.php" >
 				<div class="row">
+				<div class="prefilled-prd-details" style="width: 100%; margin-top:-14px;">
+				<img src="img/hlogo.png" style="width: 100%;">
+				<h2 style="padding: 15px;text-align: center;">FEEDBACK FORM</h2>
+				</div>
 				<div class="prefilled-prd-details" style="width: 100%;border: 2px solid #0ae52ffa;margin-top: -14px;">
 				<h2 style="padding: 15px;background: #000;color: #fff;text-align: center;"><?php echo @$productName; ?></h2>
 					<table style="width: 100%;margin-top: -7px;">
@@ -133,27 +137,26 @@
 						</tbody>
 					</table>
 				</div>
-				<h2 style="padding: 15px;">Tell us about the problem</h2>
+				<h2 style="padding: 15px;">Please select appropriate option:</h2>
 				<div class="prefilled-prd-details" style="background: #ecf0f3;width: 100%;border: 2px solid #0ae52ffa;">
-				
 				<div class="col-md-6">
 					<div class="form-group">
-						<label>Your Name</label>
-						<input type="text" class="form-control" name="uname" style="width:24em;" value="<?php echo @$uname; ?>" required placeholder="Enter Your Name">
-					</div>
-					<div class="form-group">
-						<label>Email</label>
-						<input type="email" class="form-control" name="email" style="width:24em;" value="<?php echo @$email; ?>" required placeholder="Enter Your Email">
-					</div>
-					</div>
-				<div class="col-md-6">
-					<div class="form-group">
-						<label>Problem Type</label>
+						<label>Query Type</label>
 						<select class="form-control" name="prbtype" style="width:24em;" value="<?php echo @$prbtype; ?>"  required placeholder="Enter Product Expiry Date">
 						  <option value="prb1">Product information</option>
 						  <option value="prb2">Feedback or product complaint</option>
 						  <option value="prb3">Adverse reaction from product</option>
 						</select>
+					</div>
+					<div class="form-group">
+						<label>Your Name</label>
+						<input type="text" class="form-control" name="uname" style="width:24em;" value="<?php echo @$uname; ?>" required placeholder="Enter Your Name">
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<label>Email</label>
+						<input type="email" class="form-control" name="email" style="width:24em;" value="<?php echo @$email; ?>" required placeholder="Enter Your Email">
 					</div>
 					<div class="form-group">
 						<label>Description</label>
@@ -172,42 +175,5 @@
 </body>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 	<footer>	
-	<?php if (isset($_POST['uname'])) { ?>
-	  <table>
-    <thead>
-      <tr>
-        <th>Product Name</th>
-        <th>Product Number</th>
-        <th>Product Batch</th>
-		<th>Product Region</th>
-        <th>MFG Date</th>
-        <th>EXP Date</th>
-		<th>Price</th>
-        <th>Name</th>
-        <th>Email</th>
-		<th>Mobile</th>
-        <th>Problem Type</th>
-        <th>Problem Details</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td data-th="Product Name"><?php echo $_POST['pname'];?></td>
-        <td data-th="Product Number"><?php echo $_POST['pnumber'];?></td>
-        <td data-th="Product Batch"><?php echo $_POST['pbatch'];?></td>
-		<td data-th="Product Region"><?php echo $_POST['pregion'];?></td>
-        <td data-th="MFG Date"><?php echo $_POST['pmfgdate'];?></td>
-        <td data-th="EXP Date"><?php echo $_POST['pexpirydate'];?></td>
-		<td data-th="Price"><?php echo $_POST['pprice'];?></td>
-        <td data-th="Name"><?php echo $_POST['uname'];?></td>
-        <td data-th="Email"><?php echo $_POST['email'];?></td>
-		<td data-th="Mobile"><?php echo $_POST['mob'];?></td>
-        <td data-th="Problem Type"><?php echo $_POST['prbtype'];?></td>
-        <td data-th="Problem Details"><?php echo $_POST['prbdetails'];?></td>
-      </tr>
-      <!-- Add more rows as needed -->
-    </tbody>
-  </table>
-	<?php } ?>
 	</footer>
 </html>
