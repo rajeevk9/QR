@@ -103,7 +103,7 @@
 				<form method="post" action="thankyou.php" >
 				<div class="row">
 				<div class="prefilled-prd-details" style="width: 100%; margin-top:-14px;">
-				<img src="img/hlogo.png" style="width: 100%;">
+				<img src="img/hlogo.png" style="width: 50%;margin-left: 25%;">
 				<h2 style="padding: 15px;text-align: center;">FEEDBACK FORM</h2>
 				</div>
 				<div class="prefilled-prd-details" style="width: 100%;border: 2px solid #0ae52ffa;margin-top: -14px;">
