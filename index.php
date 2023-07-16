@@ -33,7 +33,7 @@ if(isset($_POST['submit']) ) {
 	//$codeContents = 'mailto:rajeev@text.com?subject='.urlencode($pname).'&body='.urlencode($pnumber); 
 	//header("Location: http://localhost/qrcode/QR/result.php?ProductName=".$pname."&ProductNumber=".$pnumber."&ProductBatch=".$pbatch."&ProductRegion=".$pregion."&ProductMfgDate=".$pmfgdate."&ProductExpDate=".$pexpirydate."&ProductPrice=".$pprice);
 	//QRcode::png($codeContents, $tempDir.''.$filename.'.png', QR_ECLEVEL_L, 5);
-	QRcode::png("http://23.96.36.38/QR/result.php?ProductName=".rawurlencode($pname)."&ProductNumber=".$pnumber."&ProductBatch=".$pbatch."&ProductMfgDate=".$pmfgdate."&ProductExpDate=".$pexpirydate);
+	QRcode::png("http://34.242.8.17/QR/result.php?ProductName=".rawurlencode($pname)."&ProductNumber=".$pnumber."&ProductBatch=".$pbatch."&ProductMfgDate=".$pmfgdate."&ProductExpDate=".$pexpirydate);
 }
 ?>
 <!DOCTYPE html>
