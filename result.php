@@ -1,34 +1,26 @@
 <?php
 	if (isset($_GET['ProductName'])) {
 		$productName = rawurldecode($_GET['ProductName']);
-	}else{
-		$productName = $_POST['pname'];
 	}
 	if (isset($_GET['ProductNumber'])) {
 		$productNumber = $_GET['ProductNumber'];
-	}else{
-		$productNumber = $_POST['pnumber'];
 	}
 	if (isset($_GET['ProductBatch'])) {
 		$productBatch = $_GET['ProductBatch'];
-	}else{
-		$productBatch = $_POST['pbatch'];
 	}
 	if (isset($_GET['ProductMfgDate'])) {
 		$productMfgDate = $_GET['ProductMfgDate'];
-	}else{
-		$productMfgDate = $_POST['pmfgdate'];
 	}
 	if (isset($_GET['ProductExpDate'])) {
 		$productExpDate = $_GET['ProductExpDate'];
-	}else{
-	$productExpDate = $_POST['pexpirydate'];
 	}
 	if (isset($_POST['uname'])) {
 		$uname = $_POST['uname'];
 	}
 	if (isset($_POST['email'])) {
 		$email = $_POST['email'];
+		$pos = strpos($email, '@');
+		$username = substr($email, 0, $pos);
 	}
 	if (isset($_POST['mob'])) {
 		$mob = $_POST['mob'];
@@ -39,6 +31,7 @@
 	if (isset($_POST['prbdetails'])) {
 		$prbdetails = $_POST['prbdetails'];
 	}
+	
 ?>
 <!DOCTYPE html>
 <html lang="en-US">
@@ -100,7 +93,7 @@
 	</head>
 	<body onload="startTime()" style="font-size: 1.5rem !important;">
 		<div class="container" style="padding: 24px;">
-				<form method="post" action="thankyou.php" >
+				<form method="post" action="thankyou.php?caseid=".<?php echo $username.$productNumber;?> >
 				<div class="row">
 				<div class="prefilled-prd-details" style="width: 100%; margin-top:-14px;">
 				<img src="img/hlogo.png" style="width: 50%;margin-left: 25%;">

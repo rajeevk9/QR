@@ -9,30 +9,15 @@ if(!file_exists($f)){
  
 include('libs/phpqrcode/qrlib.php'); 
 
-function getUsernameFromEmail($email) {
-	$find = '@';
-	$pos = strpos($email, $find);
-	$username = substr($email, 0, $pos);
-	return $username;
-}
-
 if(isset($_POST['submit']) ) {
 	$tempDir = 'temp/'; 
 	$pname = $_POST['pname'];
 	$pnumber = $_POST['pnumber'];
 	$pbatch = $_POST['pbatch'];
-	//$pregion = $_POST['pregion'];
 	$pmfgdate = $_POST['pmfgdate'];
 	$pexpirydate = $_POST['pexpirydate'];
-	//$pprice = $_POST['pprice'];
-	//$rurl = $_POST['rurl'];
-	
-	//$subject =  $_POST['subject'];
 	$filename = $pname."_".$pnumber;
-	//$body =  $_POST['msg'];
-	//$codeContents = 'mailto:rajeev@text.com?subject='.urlencode($pname).'&body='.urlencode($pnumber); 
-	//header("Location: http://localhost/qrcode/QR/result.php?ProductName=".$pname."&ProductNumber=".$pnumber."&ProductBatch=".$pbatch."&ProductRegion=".$pregion."&ProductMfgDate=".$pmfgdate."&ProductExpDate=".$pexpirydate."&ProductPrice=".$pprice);
-	//QRcode::png($codeContents, $tempDir.''.$filename.'.png', QR_ECLEVEL_L, 5);
+	
 	QRcode::png("http://34.242.8.17/QR/result.php?ProductName=".rawurlencode($pname)."&ProductNumber=".$pnumber."&ProductBatch=".$pbatch."&ProductMfgDate=".$pmfgdate."&ProductExpDate=".$pexpirydate, $tempDir.'/'.$filename.'.png', QR_ECLEVEL_L, 5);
 }
 ?>
@@ -73,10 +58,6 @@ if(isset($_POST['submit']) ) {
 						<label>Product Batch</label>
 						<input type="text" class="form-control" name="pbatch" style="width:20em;" value="<?php echo @$pbatch; ?>" required pattern="[a-zA-Z0-9 .]+" placeholder="Enter Product Batch"></textarea>
 					</div>
-					<!--div class="form-group">
-						<label>Product Region</label>
-						<input type="text" class="form-control" name="pregion" style="width:20em;" value="<?php //echo @$pregion; ?>" required placeholder="Enter Product Region"></textarea>
-					</div-->
 			  </div>
 			  <div class="col-md-6">
 				<div class="form-group">
@@ -87,10 +68,6 @@ if(isset($_POST['submit']) ) {
 						<label>Expiry Date</label>
 						<input type="date" class="form-control" name="pexpirydate" style="width:20em;" value="<?php echo @$pexpirydate; ?>" required placeholder="Enter Product Expiry Date"></textarea>
 					</div>
-					<!--div class="form-group">
-						<label>Price</label>
-						<input type="number" class="form-control" name="pprice" style="width:20em;" value="<?php //echo @$pprice; ?>" required placeholder="Enter Product Price"></textarea>
-					</div-->
 					</div>
 					</div>		
 				<div class="form-group">
