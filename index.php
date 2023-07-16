@@ -33,7 +33,7 @@ if(isset($_POST['submit']) ) {
 	//$codeContents = 'mailto:rajeev@text.com?subject='.urlencode($pname).'&body='.urlencode($pnumber); 
 	//header("Location: http://localhost/qrcode/QR/result.php?ProductName=".$pname."&ProductNumber=".$pnumber."&ProductBatch=".$pbatch."&ProductRegion=".$pregion."&ProductMfgDate=".$pmfgdate."&ProductExpDate=".$pexpirydate."&ProductPrice=".$pprice);
 	//QRcode::png($codeContents, $tempDir.''.$filename.'.png', QR_ECLEVEL_L, 5);
-	QRcode::png("http://34.242.8.17/QR/result.php?ProductName=".rawurlencode($pname)."&ProductNumber=".$pnumber."&ProductBatch=".$pbatch."&ProductMfgDate=".$pmfgdate."&ProductExpDate=".$pexpirydate);
+	QRcode::png("http://34.242.8.17/QR/result.php?ProductName=".rawurlencode($pname)."&ProductNumber=".$pnumber."&ProductBatch=".$pbatch."&ProductMfgDate=".$pmfgdate."&ProductExpDate=".$pexpirydate, $tempDir.'/'.$filename.'.png', QR_ECLEVEL_L, 5);
 }
 ?>
 <!DOCTYPE html>
@@ -102,15 +102,15 @@ if(isset($_POST['submit']) ) {
 				$filename = "author";
 			}
 			?>
-			<!--div class="q">
+			<div class="q">
 				<h2 style="text-align:center">QR Code Result: </h2>
 				<center>
 					<div class="qrframe" style="border:2px solid black; width:210px; height:210px;">
-							<?php //echo '<img src="temp/'. @$filename.'.png" style="width:200px; height:200px;"><br>'; ?>
+							<?php echo '<img src="temp/'. @$filename.'.png" style="width:200px; height:200px;"><br>'; ?>
 					</div>
-					<a class="btn btn-primary submitBtn" style="width:210px; margin:5px 0;" href="download.php?file=<?php //echo $filename; ?>.png ">Download QR Code</a>
+					<a class="btn btn-primary submitBtn" style="width:210px; margin:5px 0;" href="download.php?file=<?php echo $filename; ?>.png ">Download QR Code</a>
 				</center>
-			</div--->
+			</div>
 			
 		</div>
 </body>
