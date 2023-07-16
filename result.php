@@ -19,8 +19,6 @@
 	}
 	if (isset($_POST['email'])) {
 		$email = $_POST['email'];
-		$pos = strpos($email, '@');
-		$username = substr($email, 0, $pos);
 	}
 	if (isset($_POST['mob'])) {
 		$mob = $_POST['mob'];
@@ -93,7 +91,7 @@
 	</head>
 	<body onload="startTime()" style="font-size: 1.5rem !important;">
 		<div class="container" style="padding: 24px;">
-				<form method="post" action="thankyou.php?caseid=".<?php echo $username.$productNumber;?> >
+				<form method="post" action="thankyou.php?caseid=".<?php echo $productNumber;?> >
 				<div class="row">
 				<div class="prefilled-prd-details" style="width: 100%; margin-top:-14px;">
 				<img src="img/hlogo.png" style="width: 50%;margin-left: 25%;">

@@ -1,3 +1,13 @@
+<?php
+if (isset($_POST['email'])) {
+	$email = $_POST['email'];
+	$pos = strpos($email, '@');
+	$username = substr($email, 0, $pos);
+	}
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en-US">
 	<head>
@@ -59,7 +69,7 @@
 				<div class="row">
 				<div class="prefilled-prd-details" style="width: 100%;border-bottom: 5px solid #0ae52ffa;background: #000;">
 					<h2 style="padding: 15px;background: #000;color: #fff;text-align: center;">
-					We're sorry to hear about your problem. Please wait for an update as we resolve your concern. Your auto generated case id is <?php echo $_GET['caseid'];?> for further tracking of this case.
+					We're sorry to hear about your problem. Please wait for an update as we resolve your concern. Your case id is <?php echo $username.$_GET['caseid'];?>.
 					</h2>
 				</div>
 	</body>			
